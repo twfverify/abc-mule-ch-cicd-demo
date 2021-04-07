@@ -21,7 +21,7 @@ pipeline {
       steps {
         echo 'Deploying only because of code commit...'
         echo 'Deploying to  dev environent....'
-        bat 'mvn package deploy -DmuleDeploy -Dusername=muser1 -Dpassword=Lakshmi1 -DworkerType=Micro -Dworkers=1 -Dregion=us-west-2'
+        bat 'mvn clean package deploy -DmuleDeploy -Dusername=muser1 -Dpassword=Lakshmi1 -Dworkers=1 -Dworker.type=Micro -Denvironment=Sandbox -Dmule.version=4.3.0'
       }
 	  
 	}
